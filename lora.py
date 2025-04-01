@@ -83,54 +83,24 @@ for epoch in range(1):
         timesteps = torch.randint(0, noise_scheduler.config.num_train_timesteps, (1,), device=latents.device).long()
         noisy_latents = noise_scheduler.add_noise(latents, noise, timesteps)
 
-        # Text encoding - old
-        #text_input_ids_1 = tokenizer_1(text_input, padding="max_length", truncation=True, max_length=77, return_tensors="pt").input_ids.to(accelerator.device)
-        #text_input_ids_2 = tokenizer_2(text_input, padding="max_length", truncation=True, max_length=77, return_tensors="pt").input_ids.to(accelerator.device)
-
-        #encoder_hidden_states_1 = text_encoder_1(text_input_ids_1)[0]
-        #encoder_hidden_states_2 = text_encoder_2(text_input_ids_2)[0]
-
-        # Pooled embedding for CFG guidance
-        #pooled_prompt_embeds = encoder_hidden_states_2.mean(dim=1)  # (B, 1280)
-
-        # Predict noise
-        #model_pred = unet(noisy_latents, timesteps, encoder_hidden_states_1, added_cond_kwargs={"text_embeds": encoder_hidden_states_2}).sample
-
         # Text encoding — only text_encoder_2 is needed
-        text_input_ids = tokenizer_2(text_input, padding="max_length", truncation=True, max_length=77, return_tensors="pt").input_ids.to(accelerator.device)
+        # Use SDXL pipeline's internal logic to encode the prompt properly
+        prompt = batch["text"]
+        prompt_embeds, pooled_prompt_embeds = pipe.encode_prompt(prompt)
         
-        # Hidden states for cross-attention
-        encoder_hidden_states = text_encoder_2(text_input_ids)[0]
-        
-        # Pooled embedding for CFG guidance
-        #pooled_prompt_embeds = encoder_hidden_states.mean(dim=1)  # (B, 1280)
-        pooled_prompt_embeds = encoder_hidden_states[:, 0]  # shape: (B, 1280)
-
-        # Generate time_ids
+        # Time IDs: SDXL requires original, crop, and target sizes
         add_time_ids = torch.tensor([[
-          resolution, resolution,  # original_size
-          resolution, resolution,  # crop_coords_top_left
-          resolution, resolution   # target_size
-        ]], dtype=encoder_hidden_states.dtype, device=encoder_hidden_states.device)
-
-        # Expand to batch
-        add_time_ids = add_time_ids.expand(encoder_hidden_states.shape[0], -1)
+            resolution, resolution,  # original_size
+            0, 0,                    # crop coords
+            resolution, resolution   # target_size
+        ]], dtype=torch.int32, device=prompt_embeds.device)
+        add_time_ids = add_time_ids.expand(prompt_embeds.shape[0], -1)
         
-        # Predict noise with required time_ids - old
-        #model_pred = unet(
-        #    noisy_latents,
-        #    timesteps,
-        #    encoder_hidden_states_2,
-        #    added_cond_kwargs={
-        #        "text_embeds": pooled_prompt_embeds,
-        #        "time_ids": add_time_ids
-        #    }
-        #).sample
-
+        # Predict noise
         model_pred = unet(
             noisy_latents,
             timesteps,
-            encoder_hidden_states,
+            prompt_embeds,
             added_cond_kwargs={
                 "text_embeds": pooled_prompt_embeds,
                 "time_ids": add_time_ids
