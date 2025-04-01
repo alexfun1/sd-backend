@@ -134,9 +134,9 @@ def train_lora(image_folder, metadata_file, pretrained_model_name_or_path, outpu
 
     if accelerator.is_main_process:
         if "xl" in pretrained_model_name_or_path.lower():
-            pipeline = StableDiffusionXLPipeline(text_encoder=accelerator.unwrap_model(text_encoder), text_encoder_2=accelerator.unwrap_model(text_encoder_2), vae=StableDiffusionXLPipeline.from_pretrained(pretrained_model_name_or_path).vae, unet=accelerator.unwrap_model(unet), tokenizer=tokenizer, tokenizer_2=tokenizer_2, scheduler=accelerator.noise_scheduler, safety_checker=None, feature_extractor=None)
+            pipeline = StableDiffusionXLPipeline(text_encoder=accelerator.unwrap_model(text_encoder), text_encoder_2=accelerator.unwrap_model(text_encoder_2), vae=StableDiffusionXLPipeline.from_pretrained(pretrained_model_name_or_path).vae, unet=accelerator.unwrap_model(unet), tokenizer=tokenizer, tokenizer_2=tokenizer_2, scheduler=noise_scheduler, safety_checker=None, feature_extractor=None)
         else:
-            pipeline = StableDiffusionLoraPipeline(text_encoder=accelerator.unwrap_model(text_encoder), vae=StableDiffusionPipeline.from_pretrained(pretrained_model_name_or_path).vae, unet=accelerator.unwrap_model(unet), tokenizer=tokenizer, scheduler=accelerator.noise_scheduler, safety_checker=None, feature_extractor=None)
+            pipeline = StableDiffusionPipeline(text_encoder=accelerator.unwrap_model(text_encoder), vae=StableDiffusionPipeline.from_pretrained(pretrained_model_name_or_path).vae, unet=accelerator.unwrap_model(unet), tokenizer=tokenizer, scheduler=noise_scheduler, safety_checker=None, feature_extractor=None)
         pipeline.save_pretrained(output_dir)
 
 if __name__ == "__main__":
