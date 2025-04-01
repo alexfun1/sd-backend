@@ -86,7 +86,12 @@ for epoch in range(1):
         # Text encoding — only text_encoder_2 is needed
         # Use SDXL pipeline's internal logic to encode the prompt properly
         prompt = batch["text"]
-        prompt_embeds, pooled_prompt_embeds = pipe.encode_prompt(prompt)
+        prompt_embeds, pooled_prompt_embeds = pipe.encode_prompt(
+            prompt,
+            device=accelerator.device,
+            do_classifier_free_guidance=False,
+            return_pooled_prompt_embeds=True
+        )
         
         # Time IDs: SDXL requires original, crop, and target sizes
         add_time_ids = torch.tensor([[
