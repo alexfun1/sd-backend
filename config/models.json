@@ -1,0 +1,48 @@
+{
+    "models": [
+        {
+            "id": "pocsd15",
+            "file": "v1-5-pruned.safetensors",
+            "type": "sd15",
+            "settings": {
+                "scheduler": "LMSDiscreteScheduler",
+                "guidance": 7.5,
+                "steps": 20,
+                "clip_skip": 2
+            }
+        },
+        {
+            "id": "pocsdxl",
+            "file": "pocsdxl.safetensors",
+            "type": "sdxl",
+            "settings": {
+                "scheduler": "DDIM",
+                "guidance": 7.5,
+                "steps": 20,
+                "clip_skip": 2
+            }
+        },
+        {
+            "id": "pocpony",
+            "file": "pocpony.safetensors",
+            "type": "pony",
+            "settings": {
+                "scheduler": "DDIM",
+                "guidance": 7.5,
+                "steps": 20,
+                "clip_skip": 2
+            }
+        },
+        {
+            "id": "pocsd2_2",
+            "file": "pocsd2_2.safetensors",
+            "type": "sd2",
+            "settings": {
+                "scheduler": "DDIM",
+                "guidance": 7.5,
+                "steps": 20,
+                "clip_skip": 2
+            }
+        }
+    ]
+}
