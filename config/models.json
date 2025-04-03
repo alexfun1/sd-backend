@@ -5,7 +5,7 @@
             "file": "v1-5-pruned.safetensors",
             "type": "sd15",
             "settings": {
-                "scheduler": "LMSDiscreteScheduler",
+                "scheduler": "DPMSolverMultistepScheduler",
                 "guidance": 7.5,
                 "steps": 20,
                 "clip_skip": 2

@@ -55,14 +55,6 @@ def txt2img(prompt, negative_prompt="", model_name="pocsd15", width=768, height=
         seed = _random_seed()
     generator = torch.manual_seed(seed)
 
-    #Set Scheduler: should be from model's config for better results
-    # scheduler = "DDIM"
-    # scheduler = "PNDM"
-    # scheduler = "LMSDiscreteScheduler"
-    # scheduler = "DPMSolverMultistepScheduler"
-    # scheduler = "DPMSolverSinglestepScheduler"
-    # scheduler = "Euler A"
-
     # Load the model
     match model["type"]:
         case "sd15":
@@ -93,7 +85,7 @@ def txt2img(prompt, negative_prompt="", model_name="pocsd15", width=768, height=
         case "LMSDiscreteScheduler":
             pipeline.scheduler = LMSDiscreteScheduler.from_config(pipeline.scheduler.config)
         case "DPMSolverMultistepScheduler":
-            pipeline.scheduler = DPMSolverMultistepScheduler.from_config(pipeline.scheduler.config)
+            pipeline.scheduler = DPMSolverMultistepScheduler.from_config(pipeline.scheduler.config, algorithm_type="sde-dpmsolver++")
         case "DPMSolverSinglestepScheduler":
             pipeline.scheduler = DPMSolverSinglestepScheduler.from_config(pipeline.scheduler.config)
         case "Euler A":
