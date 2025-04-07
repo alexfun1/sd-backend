@@ -5,10 +5,10 @@ import diffuseit as di
 
 def main():
     app = gr.TabbedInterface(
-        [w.txt2img_tab(), w.txt2img_chat_tab()],
-        ["Text to Image", "Chat"],
+        [w.txt2img_chat_tab(), w.txt2img_tab()],
+        ["Chat", "Text to Image"],
         # ["Image to Image", "Inpaint", "Upscale"],
-        title="Diffusion Web UI",
+        title="Simple Diffusion Web UI",
         theme=gr.themes.Base(),
         #css="styles.css",
     )

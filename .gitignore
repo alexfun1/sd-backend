@@ -2,3 +2,4 @@
 finetune_lora/*
 runs/*
 __pycache__/*
+output/*

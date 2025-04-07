@@ -1,0 +1,302 @@
+[
+    {
+        "id": "ponimilfmix_lightning",
+        "file": "ponimilfmix_lightning.safetensors",
+        "type": "sdxl",
+        "settings": {
+            "scheduler": "DDIM",
+            "use_karras": true,
+            "width": 512,
+            "height": 512,
+            "seed": -1,
+            "num_inference_steps": 30,
+            "guidance": 7.5,
+            "clip_skip": 2
+        }
+    },
+    {
+        "id": "realismIllustriousBy_v25BF16",
+        "file": "realismIllustriousBy_v25BF16.safetensors",
+        "type": "sdxl",
+        "settings": {
+            "scheduler": "DDIM",
+            "use_karras": true,
+            "width": 512,
+            "height": 512,
+            "seed": -1,
+            "num_inference_steps": 30,
+            "guidance": 7.5,
+            "clip_skip": 2
+        }
+    },
+    {
+        "id": "unlimitedPORN_slutocalypse",
+        "file": "unlimitedPORN_slutocalypse.safetensors",
+        "type": "sdxl",
+        "settings": {
+            "scheduler": "DDIM",
+            "use_karras": true,
+            "width": 512,
+            "height": 512,
+            "seed": -1,
+            "num_inference_steps": 30,
+            "guidance": 7.5,
+            "clip_skip": 2
+        }
+    },
+    {
+        "id": "realDream_sdxlPony15",
+        "file": "realDream_sdxlPony15.safetensors",
+        "type": "sdxl",
+        "settings": {
+            "scheduler": "DDIM",
+            "use_karras": true,
+            "width": 512,
+            "height": 512,
+            "seed": -1,
+            "num_inference_steps": 30,
+            "guidance": 7.5,
+            "clip_skip": 2
+        }
+    },
+    {
+        "id": "Juggernaut_X_RunDiffusion_Hyper",
+        "file": "Juggernaut_X_RunDiffusion_Hyper.safetensors",
+        "type": "sdxl",
+        "settings": {
+            "scheduler": "DDIM",
+            "use_karras": true,
+            "width": 512,
+            "height": 512,
+            "seed": -1,
+            "num_inference_steps": 30,
+            "guidance": 7.5,
+            "clip_skip": 2
+        }
+    },
+    {
+        "id": "pornyPonyByStable_v10BF16",
+        "file": "pornyPonyByStable_v10BF16.safetensors",
+        "type": "sdxl",
+        "settings": {
+            "scheduler": "DDIM",
+            "use_karras": true,
+            "width": 512,
+            "height": 512,
+            "seed": -1,
+            "num_inference_steps": 30,
+            "guidance": 7.5,
+            "clip_skip": 2
+        }
+    },
+    {
+        "id": "dreamshaperXL_v21TurboDPMSDE",
+        "file": "dreamshaperXL_v21TurboDPMSDE.safetensors",
+        "type": "sdxl",
+        "settings": {
+            "scheduler": "DDIM",
+            "use_karras": true,
+            "width": 512,
+            "height": 512,
+            "seed": -1,
+            "num_inference_steps": 30,
+            "guidance": 7.5,
+            "clip_skip": 2
+        }
+    },
+    {
+        "id": "aniversePonyXL_v40",
+        "file": "aniversePonyXL_v40.safetensors",
+        "type": "sdxl",
+        "settings": {
+            "scheduler": "DDIM",
+            "use_karras": true,
+            "width": 512,
+            "height": 512,
+            "seed": -1,
+            "num_inference_steps": 30,
+            "guidance": 7.5,
+            "clip_skip": 2
+        }
+    },
+    {
+        "id": "uberRealisticPornMergePonyxl_ponyxlHybridV1",
+        "file": "uberRealisticPornMergePonyxl_ponyxlHybridV1.safetensors",
+        "type": "sdxl",
+        "settings": {
+            "scheduler": "DDIM",
+            "use_karras": true,
+            "width": 512,
+            "height": 512,
+            "seed": -1,
+            "num_inference_steps": 30,
+            "guidance": 7.5,
+            "clip_skip": 2
+        }
+    },
+    {
+        "id": "ponyDiffusionV6XL_v6StartWithThisOne",
+        "file": "ponyDiffusionV6XL_v6StartWithThisOne.safetensors",
+        "type": "sdxl",
+        "settings": {
+            "scheduler": "DDIM",
+            "use_karras": true,
+            "width": 512,
+            "height": 512,
+            "seed": -1,
+            "num_inference_steps": 30,
+            "guidance": 7.5,
+            "clip_skip": 2
+        }
+    },
+    {
+        "id": "duchaitenPonyReal_v20",
+        "file": "duchaitenPonyReal_v20.safetensors",
+        "type": "sdxl",
+        "settings": {
+            "scheduler": "DDIM",
+            "use_karras": true,
+            "width": 512,
+            "height": 512,
+            "seed": -1,
+            "num_inference_steps": 30,
+            "guidance": 7.5,
+            "clip_skip": 2
+        }
+    },
+    {
+        "id": "pornmasterProPony_unrealPonyV2",
+        "file": "pornmasterProPony_unrealPonyV2.safetensors",
+        "type": "sdxl",
+        "settings": {
+            "scheduler": "DDIM",
+            "use_karras": true,
+            "width": 512,
+            "height": 512,
+            "seed": -1,
+            "num_inference_steps": 30,
+            "guidance": 7.5,
+            "clip_skip": 2
+        }
+    },
+    {
+        "id": "pornmasterProSDXL_sdxlV2VAE",
+        "file": "pornmasterProSDXL_sdxlV2VAE.safetensors",
+        "type": "sdxl",
+        "settings": {
+            "scheduler": "DDIM",
+            "use_karras": true,
+            "width": 512,
+            "height": 512,
+            "seed": -1,
+            "num_inference_steps": 30,
+            "guidance": 7.5,
+            "clip_skip": 2
+        }
+    },
+    {
+        "id": "animergePonyXL_v40",
+        "file": "animergePonyXL_v40.safetensors",
+        "type": "sdxl",
+        "settings": {
+            "scheduler": "DDIM",
+            "use_karras": true,
+            "width": 512,
+            "height": 512,
+            "seed": -1,
+            "num_inference_steps": 30,
+            "guidance": 7.5,
+            "clip_skip": 2
+        }
+    },
+    {
+        "id": "clarityXL_v20",
+        "file": "clarityXL_v20.safetensors",
+        "type": "sdxl",
+        "settings": {
+            "scheduler": "DDIM",
+            "use_karras": true,
+            "width": 512,
+            "height": 512,
+            "seed": -1,
+            "num_inference_steps": 30,
+            "guidance": 7.5,
+            "clip_skip": 2
+        }
+    },
+    {
+        "id": "pornyPonyByStable_v20FP16",
+        "file": "pornyPonyByStable_v20FP16.safetensors",
+        "type": "sdxl",
+        "settings": {
+            "scheduler": "DDIM",
+            "use_karras": true,
+            "width": 512,
+            "height": 512,
+            "seed": -1,
+            "num_inference_steps": 30,
+            "guidance": 7.5,
+            "clip_skip": 2
+        }
+    },
+    {
+        "id": "cyberrealisticPony_v8",
+        "file": "cyberrealisticPony_v8.safetensors",
+        "type": "sdxl",
+        "settings": {
+            "scheduler": "DDIM",
+            "use_karras": true,
+            "width": 512,
+            "height": 512,
+            "seed": -1,
+            "num_inference_steps": 30,
+            "guidance": 7.5,
+            "clip_skip": 2
+        }
+    },
+    {
+        "id": "cyberrealisticPony_v85",
+        "file": "cyberrealisticPony_v85.safetensors",
+        "type": "sdxl",
+        "settings": {
+            "scheduler": "DDIM",
+            "use_karras": true,
+            "width": 512,
+            "height": 512,
+            "seed": -1,
+            "num_inference_steps": 30,
+            "guidance": 7.5,
+            "clip_skip": 2
+        }
+    },
+    {
+        "id": "cyberrealisticXL_v5",
+        "file": "cyberrealisticXL_v5.safetensors",
+        "type": "sdxl",
+        "settings": {
+            "scheduler": "DDIM",
+            "use_karras": true,
+            "width": 512,
+            "height": 512,
+            "seed": -1,
+            "num_inference_steps": 30,
+            "guidance": 7.5,
+            "clip_skip": 2
+        }
+    },
+    {
+        "id": "anitoonPonyXL_v40",
+        "file": "anitoonPonyXL_v40.safetensors",
+        "type": "sdxl",
+        "settings": {
+            "scheduler": "DDIM",
+            "use_karras": true,
+            "width": 512,
+            "height": 512,
+            "seed": -1,
+            "num_inference_steps": 30,
+            "guidance": 7.5,
+            "clip_skip": 2
+        }
+    }
+]

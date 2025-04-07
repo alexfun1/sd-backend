@@ -1,0 +1,17 @@
+gradio
+diffusers["torch"] transformers
+git+https://github.com/huggingface/diffusers
+torch
+transformers
+xformers
+accelerate
+torchvision
+scipy
+compell
+pyparsing
+compell
+pip install compel
+diffusers transformers
+diffusers transformers
+
+ gradio

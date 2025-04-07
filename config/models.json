@@ -1,44 +1,36 @@
 {
     "models": [
         {
-            "id": "pocsd15",
-            "file": "v1-5-pruned.safetensors",
-            "type": "sd15",
-            "settings": {
-                "scheduler": "DPMSolverMultistepScheduler",
-                "guidance": 7.5,
-                "steps": 20,
-                "clip_skip": 2
-            }
-        },
-        {
-            "id": "pocsdxl",
-            "file": "pocsdxl.safetensors",
+            "id": "DuchaitenPonyReal",
+            "file": "duchaitenPonyReal_v20.safetensors",
             "type": "sdxl",
             "settings": {
-                "scheduler": "DDIM",
-                "guidance": 7.5,
-                "steps": 20,
+                "scheduler": "DPMSolverMultistepScheduler",
+                "use_karras": false,
+                "guidance": 9,
+                "steps": 30,
                 "clip_skip": 2
             }
         },
         {
-            "id": "pocpony",
-            "file": "pocpony.safetensors",
-            "type": "pony",
+            "id": "DreamShaperXL",
+            "file": "dreamshaperXL_v21TurboDPMSDE.safetensors",
+            "type": "sdxl",
             "settings": {
-                "scheduler": "DDIM",
-                "guidance": 7.5,
-                "steps": 20,
+                "scheduler": "DPMSolverMultistepScheduler",
+                "use_karras": true,
+                "guidance": 2,
+                "steps": 8,
                 "clip_skip": 2
             }
         },
         {
-            "id": "pocsd2_2",
-            "file": "pocsd2_2.safetensors",
-            "type": "sd2",
+            "id": "DreamShaper 8",
+            "file": "dreamshaper_8.safetensors",
+            "type": "sd15",
             "settings": {
-                "scheduler": "DDIM",
+                "scheduler": "Euler A",
+                "use_karras": false,
                 "guidance": 7.5,
                 "steps": 20,
                 "clip_skip": 2
